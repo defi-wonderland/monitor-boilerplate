@@ -1,0 +1,24 @@
+# General
+.prettierignore
+.husky
+.gitignore
+.gitattributes
+.gitmodules
+.env.example
+.env
+workspace.code-workspace
+.DS_STORE
+codechecks.yml
+
+lib/
+cache/
+out/
+
+
+# Node
+node_modules
+package-lock.json
+yarn.lock
+yarn-error.log
+.github/CODEOWNERS
+

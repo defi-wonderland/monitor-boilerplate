@@ -1,0 +1,8 @@
+[
+  { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "string", "name": "testData", "type": "string" }], "name": "ChildEvent1", "type": "event" },
+  { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "string", "name": "testData", "type": "string" }], "name": "ChildEvent2", "type": "event" },
+  { "anonymous": false, "inputs": [{ "indexed": false, "internalType": "string", "name": "testData", "type": "string" }], "name": "ChildEvent3", "type": "event" },
+  { "inputs": [], "name": "childCall1", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  { "inputs": [], "name": "childCall2", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
+  { "inputs": [], "name": "childCall3", "outputs": [], "stateMutability": "nonpayable", "type": "function" }
+]
