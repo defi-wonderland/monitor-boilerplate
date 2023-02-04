@@ -17,13 +17,13 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install node
         uses: actions/setup-node@v1
         with:
-          node-version: "16.x"
+          node-version: '16.x'
 
       - name: Install dependencies
         run: yarn --frozen-lockfile --network-concurrency 1
