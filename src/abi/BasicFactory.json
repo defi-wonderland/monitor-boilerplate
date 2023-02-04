@@ -1,0 +1,22 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "contractAddress",
+        "type": "address"
+      }
+    ],
+    "name": "BasicChildCreated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "createBasic",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

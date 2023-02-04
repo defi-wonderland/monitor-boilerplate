@@ -1,0 +1,59 @@
+{
+  "name": "@defi-wonderland/monitor-boilerplate",
+  "private": true,
+  "scripts": {
+    "build": "ts-node src/scripts/build.ts && tsc",
+    "test": "ts-mocha tests/*.spec.ts",
+    "tenderly:prepare": "curl https://raw.githubusercontent.com/Tenderly/tenderly-cli/master/scripts/install-linux.sh | sh",
+    "tenderly:clean": "ts-node src/scripts/clean.ts",
+    "tenderly:deploy": "yarn tenderly:login && yarn build && yarn tenderly:clean && tenderly actions deploy --debug",
+    "tenderly:login": "tenderly login --authentication-method=access-key  --access-key=${TENDERLY_ACCESS_TOKEN}",
+    "lint:check": "cross-env prettier --check './**'",
+    "lint:fix": "sort-package-json && cross-env prettier --write './**'",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts}": "prettier --write",
+    "package.json": "sort-package-json"
+  },
+  "dependencies": {
+    "@defi-wonderland/tenderly-monitor-utils": "0.0.0-c6e79248",
+    "@price-oracle/interfaces": "0.0.1",
+    "@tenderly/actions": "0.0.8",
+    "axios-retry": "3.3.1",
+    "chai": "4.3.6",
+    "dotenv": "16.0.3",
+    "fs-extra": "11.1.0",
+    "lint-staged": "13.1.0",
+    "mocha": "10.1.0",
+    "yaml": "2.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
+    "@ethersproject/abi": "5.7.0",
+    "@tenderly/actions": "0.0.8",
+    "@tenderly/actions-test": "0.0.15",
+    "@types/chai": "4.3.3",
+    "@types/fs-extra": "9.0.13",
+    "@types/mocha": "10.0.0",
+    "@types/node": "18.11.3",
+    "abitype": "0.1.8",
+    "axios": "1.2.1",
+    "cross-env": "7.0.3",
+    "dotenv": "16.0.3",
+    "ethers": "5.7.2",
+    "husky": "^8.0.3",
+    "prettier": "2.7.1",
+    "sinon": "7.5.0",
+    "sort-package-json": "1.50.0",
+    "ts-mocha": "10.0.0",
+    "ts-node": "10.9.1",
+    "typescript": "4.7.4"
+  }
+}

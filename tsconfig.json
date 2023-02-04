@@ -1,0 +1,15 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "outDir": "out",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es2020"
+  },
+  "include": ["src", "event-handler.ts"]
+}
