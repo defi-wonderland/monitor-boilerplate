@@ -33,15 +33,13 @@ jobs:
         run: yarn --frozen-lockfile --network-concurrency 1
 
       - name: Install Tenderly Cli
-        run: yarn tenderly-cli-install
-
-      - name: npm install
-        run: npm install
+        run: yarn tenderly:prepare
 
       - name: Deploy
         shell: bash
         env:
           TENDERLY_ACCESS_TOKEN: ${{ secrets.TENDERLY_ACCESS_TOKEN }}
-          TENDERLY_USERNAME: ${{ secrets.TENDERLY_USERNAME }}
-          TENDERLY_SLUG: ${{ secrets.TENDERLY_SLUG }}
-        run: yarn deploy --debug
+          TENDERLY_USERNAME: ${{ vars.TENDERLY_USERNAME }}
+          TENDERLY_SLUG: ${{ vars.TENDERLY_SLUG }}
+          TENDERLY_PRE_CLEAN: ${{ vars.TENDERLY_PRE_CLEAN }}
+        run: yarn tenderly:deploy --debug
