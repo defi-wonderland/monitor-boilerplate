@@ -22,7 +22,7 @@
     "package.json": "sort-package-json"
   },
   "dependencies": {
-    "@defi-wonderland/tenderly-monitor-utils": "0.0.0-c6e79248",
+    "@defi-wonderland/tenderly-monitor-utils": "0.0.0-4489ef27",
     "@price-oracle/interfaces": "0.0.1",
     "@tenderly/actions": "0.0.8",
     "axios-retry": "3.3.1",
